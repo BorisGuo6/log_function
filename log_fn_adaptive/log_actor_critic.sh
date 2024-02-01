@@ -6,12 +6,12 @@
 # BipedalWalker-v3 Pendulum-v1 MountainCarContinuous-v0
 # Catcher-PLE-v0 Pixelcopter-PLE-v0 Pong-PLE-v0
 # for env_name in HalfCheetah-v4 Ant-v4 Hopper-v4 Humanoid-v4
-for env_name in MountainCarContinuous-v0
+# for env_name in MountainCarContinuous-v0
 # for env_name in Acrobot-v1 
 # for env_name in Pendulum-v1
 # for env_name in BipedalWalker-v3 
 # for env_name in LunarLander-v2
-# for env_name in CartPole-v1
+for env_name in CartPole-v1
 do
     for optimizer in SGD
     do
@@ -21,7 +21,7 @@ do
             do
                 for seed in 0 1 2
                 do
-                    python /home2/ad/liuqi/log_fn_adaptive/actor_critic.py \
+                    python3 ./actor_critic.py \
                     --env_name $env_name \
                     --optimizer $optimizer \
                     --seed $seed \
